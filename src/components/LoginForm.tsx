@@ -5,6 +5,7 @@ import { cn } from "../lib/utils"
 import { LoginFormSchemaType, loginFormSchema } from "../lib/validation"
 import { Check, X } from "lucide-react"
 import ErrorMessage from "./ErrorMessage"
+import Button from "./Button"
 
 const LoginForm = () => {
   const navigate = useNavigate()
@@ -44,13 +45,14 @@ const LoginForm = () => {
               <input
                 id="fin"
                 className={cn(
-                  "w-full rounded-sm outline-none border focus:border-gray-500 border-gray-300 h-8 px-1.5 transition",
+                  "w-full rounded-sm outline-none border focus:border-gray-500 border-gray-300 h-8 px-1.5 transition uppercase",
                   dirtyFields.fin
                     ? errors.fin
                       ? "border-red-400 focus:border-red-600"
                       : "border-emerald-400 focus:border-emerald-600"
                     : ""
                 )}
+                maxLength={7}
                 {...register("fin")}
               />
               <div className="absolute right-3 top-0 inset-y-0 flex justify-center items-center">
@@ -99,14 +101,13 @@ const LoginForm = () => {
             <ErrorMessage message={errors.password.message} />
           )}
         </div>
-
-        <button
+        <Button
+          className="h-8 flex justify-center items-center text-sm rounded-[4px]"
           type="submit"
-          className="w-full bg-primary text-white text-sm h-8 rounded-[4px] disabled:opacity-75"
           disabled={!isValid || isSubmitting}
         >
           Giriş
-        </button>
+        </Button>
       </form>
     </div>
   )

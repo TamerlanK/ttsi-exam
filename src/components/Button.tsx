@@ -12,7 +12,7 @@ const Button = ({ onClick, className, children, ...props }: ButtonProps) => {
     <button
       onClick={onClick}
       className={cn(
-        "px-4 py-2 text-white bg-primary rounded-sm disabled:opacity-75 disabled:cursor-not-allowed",
+        "px-4 py-2 text-white bg-primary rounded-[4px] disabled:opacity-75 disabled:cursor-not-allowed",
         className
       )}
       {...props}

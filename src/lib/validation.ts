@@ -9,7 +9,10 @@ export const loginFormSchema = z.object({
       /^[A-Za-z0-9]+$/,
       "FİN kod yalnız hərf və rəqəmlərdən ibarət olmalıdır."
     ),
-  password: z.string().min(1, "Şifrəni daxil edin"),
+  password: z
+    .string()
+    .min(1, "Şifrəni daxil edin")
+    .min(6, "Şifrə minimum 6 simvoldan ibarət olmalıdır."),
 })
 
 export type LoginFormSchemaType = z.infer<typeof loginFormSchema>

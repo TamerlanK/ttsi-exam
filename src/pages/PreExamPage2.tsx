@@ -8,10 +8,12 @@ const PreExamPage2 = () => {
   const navigate = useNavigate()
 
   const [isAgreed, setIsAgreed] = useState(false)
+
   const handleChange = () => {
     setIsAgreed((prev) => !prev)
     console.log(isAgreed)
   }
+
   return (
     <div className="max-w-7xl mx-auto">
       <section className="px-4 lg:px-0 pt-2 space-y-3 h-[calc(100vh-80px)]">
@@ -49,11 +51,7 @@ const PreExamPage2 = () => {
             <Button onClick={() => navigate(-1)} className="text-sm">
               Geri
             </Button>
-            <Button
-              disabled={!isAgreed}
-              onClick={() => {}}
-              className="text-sm px-6"
-            >
+            <Button disabled={!isAgreed} className="text-sm px-6">
               Təsdiqlə
             </Button>
           </div>
