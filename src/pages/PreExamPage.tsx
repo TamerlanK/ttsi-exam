@@ -55,9 +55,13 @@ const PreExamPage = () => {
             kodunuzu daxil edin.
           </Notification>
         </div>
-        <div className="flex w-full justify-between items-center">
-          <Button onClick={handleBackClick}>Geri</Button>
-          <Button onClick={handleNextClick}>Başla</Button>
+        <div className="flex w-full justify-between items-center mt-2 py-3">
+          <Button className="text-sm" onClick={handleBackClick}>
+            Geri
+          </Button>
+          <Button className="text-sm" onClick={handleNextClick}>
+            Başla
+          </Button>
         </div>
       </div>
     </div>

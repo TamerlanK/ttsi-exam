@@ -1,15 +1,24 @@
-import { useState } from "react"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { SubmitHandler, useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
+import { cn } from "../lib/utils"
+import { LoginFormSchemaType, loginFormSchema } from "../lib/validation"
+import { Check, X } from "lucide-react"
+import ErrorMessage from "./ErrorMessage"
 
 const LoginForm = () => {
-  const [fin, setFin] = useState("")
-  const [password, setPassword] = useState("")
-
   const navigate = useNavigate()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, dirtyFields, isValid, isSubmitting },
+  } = useForm<LoginFormSchemaType>({
+    resolver: zodResolver(loginFormSchema),
+    mode: "onChange",
+  })
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log({ fin, password })
+  const onSubmit: SubmitHandler<LoginFormSchemaType> = (data) => {
+    console.log(data)
     navigate("/pre-exam-start")
   }
   return (
@@ -24,33 +33,77 @@ const LoginForm = () => {
           className="object-cover w-full h-full rounded-md"
         />
       </div>
-      <form className="flex flex-col gap-4 p-6" onSubmit={onSubmit}>
-        <label htmlFor="fin" className="text-neutral-600">
-          FİN nömrə
-          <input
-            type="text"
-            id="fin"
-            className="w-full rounded-sm outline-none border focus-within:border-gray-500 border-gray-300 h-8 px-1.5 mt-1"
-            value={fin}
-            onChange={(e) => setFin(e.target.value)}
-            required
-          />
-        </label>
+      <form
+        className="flex flex-col gap-4 p-6"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className="space-y-2">
+          <div className="text-neutral-600">
+            <label htmlFor="fin">FİN nömrə</label>
+            <div className="w-full relative mt-1">
+              <input
+                id="fin"
+                className={cn(
+                  "w-full rounded-sm outline-none border focus:border-gray-500 border-gray-300 h-8 px-1.5 transition",
+                  dirtyFields.fin
+                    ? errors.fin
+                      ? "border-red-400 focus:border-red-600"
+                      : "border-emerald-400 focus:border-emerald-600"
+                    : ""
+                )}
+                {...register("fin")}
+              />
+              <div className="absolute right-3 top-0 inset-y-0 flex justify-center items-center">
+                {dirtyFields.fin ? (
+                  errors.fin ? (
+                    <X className="size-5 text-red-600" />
+                  ) : (
+                    <Check className="size-5 text-emerald-600" />
+                  )
+                ) : null}
+              </div>
+            </div>
+          </div>
+          {errors.fin && <ErrorMessage message={errors.fin.message} />}
+        </div>
 
-        <label htmlFor="password" className="text-neutral-600">
-          Şifrə
-          <input
-            type="password"
-            id="password"
-            className="w-full rounded-sm outline-none border focus-within:border-gray-500 border-gray-300 h-8 px-1.5 mt-1"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
+        <div className="space-y-2 relative">
+          <div className="text-neutral-600">
+            <label htmlFor="fin">Şifrə</label>
+            <div className="w-full relative mt-1">
+              <input
+                id="password"
+                type="password"
+                className={cn(
+                  "w-full rounded-sm outline-none border focus:border-gray-500 border-gray-300 h-8 px-1.5 transition",
+                  dirtyFields.password
+                    ? errors.password
+                      ? "border-red-400 focus:border-red-600"
+                      : "border-emerald-400 focus:border-emerald-600"
+                    : ""
+                )}
+                {...register("password")}
+              />
+              <div className="absolute right-3 top-0 inset-y-0 flex justify-center items-center">
+                {dirtyFields.password ? (
+                  errors.password ? (
+                    <X className="size-5 text-red-600" />
+                  ) : (
+                    <Check className="size-5 text-emerald-600" />
+                  )
+                ) : null}
+              </div>
+            </div>
+          </div>
+          {errors.password && (
+            <ErrorMessage message={errors.password.message} />
+          )}
+        </div>
+
         <button
           type="submit"
-          className="w-full bg-primary text-white text-sm h-8 rounded-[4px]"
+          className="w-full bg-primary text-white text-sm h-8 rounded-[4px] disabled:opacity-75"
+          disabled={!isValid || isSubmitting}
         >
           Giriş
         </button>
