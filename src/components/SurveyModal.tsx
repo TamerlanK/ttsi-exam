@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useOnClickOutside } from "usehooks-ts"
 import surveyData from "../data/survey_fake_date.json"
 import SurveyQuestion from "./SurveyQuestion"
 import { X } from "lucide-react"
 import toast from "react-hot-toast"
 import Toast from "./Toast"
+import SurveyQuestionTextArea from "./SurveyQuestionTextArea"
 
 interface SurveyModalProps {
   isOpen: boolean
@@ -14,7 +15,7 @@ interface SurveyModalProps {
 const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
   const { surveyQuestions } = surveyData.result
   const [answeredQuestions, setAnsweredQuestions] = useState(
-    surveyQuestions.map(() => false)
+    Array(surveyQuestions.length).fill(false)
   )
 
   console.log(answeredQuestions.filter((answered) => answered).length)
@@ -22,13 +23,21 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
   const modalRef = useRef<HTMLDivElement>(null)
   useOnClickOutside(modalRef, onClose)
 
-  const handleAnswerQuestion = (questionIndex: number) => {
+  const handleAnswerQuestion = useCallback((questionIndex: number) => {
     setAnsweredQuestions((prevAnswers) =>
       prevAnswers.map((answer, idx) => (idx === questionIndex ? true : answer))
     )
-  }
+  }, [])
 
-  const allQuestionsAnswered = answeredQuestions.every((answered) => answered)
+  const answeredQuestionsCount = answeredQuestions.filter(
+    (answered) => answered
+  ).length
+
+  const allQuestionsAnswered = answeredQuestionsCount === surveyQuestions.length
+
+  const answeredQuestionsText = allQuestionsAnswered
+    ? "Bütün suallar cavablandırılıb."
+    : `${answeredQuestionsCount}/${surveyQuestions.length} sual cavablandırılıb.`
 
   const notify = (message: string) =>
     toast.custom(<Toast message={message} />, {
@@ -42,6 +51,12 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
       onClose()
     }
   }
+
+  useEffect(() => {
+    if (!isOpen) {
+      setAnsweredQuestions(Array(surveyQuestions.length).fill(false))
+    }
+  }, [isOpen, surveyQuestions])
 
   return (
     <>
@@ -71,10 +86,23 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
                     onAnswer={() => handleAnswerQuestion(idx)}
                   />
                 ))}
+                <SurveyQuestionTextArea
+                  order={surveyQuestions.length + 1}
+                  questionText="Təklif və iradınız varsa qeyd edə bilərsiniz."
+                />
               </div>
 
               {/* FOOTER */}
-              <div className="p-4 pt-0 w-full">
+              <div className="flex justify-between items-center p-4 pt-0">
+                <div
+                  className={`${
+                    allQuestionsAnswered
+                      ? "text-emerald-600"
+                      : "text-neutral-600"
+                  }`}
+                >
+                  {answeredQuestionsText}
+                </div>
                 <button
                   className="py-1.5 px-4 bg-emerald-700 text-sm rounded-[4px] text-white w-fit float-right"
                   onClick={handleConfirm}
