@@ -6,5 +6,21 @@ html,
 body,
 #root {
   height: 100%;
-  @apply bg-gray-200
+  @apply bg-gray-200;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply rounded-full bg-gray-200;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-500/80;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500/60;
 }

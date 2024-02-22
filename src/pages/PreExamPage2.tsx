@@ -3,15 +3,24 @@ import Notification from "../components/Notification"
 import InfoWrapper from "../layouts/InfoWrapper"
 import Button from "../components/Button"
 import { useNavigate } from "react-router-dom"
+import SurveyModal from "../components/SurveyModal"
 
 const PreExamPage2 = () => {
   const navigate = useNavigate()
 
   const [isAgreed, setIsAgreed] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleChange = () => {
     setIsAgreed((prev) => !prev)
-    console.log(isAgreed)
+  }
+
+  const handleConfirm = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
   }
 
   return (
@@ -20,7 +29,7 @@ const PreExamPage2 = () => {
         <div className="flex flex-col h-full justify-between w-full gap-2">
           <div className="space-y-2 max-w-5xl mx-auto">
             <InfoWrapper title="Diqqət!!!">
-              <div className="lg:w-1/2 w-3/4 p-4 lg:p-6 text-center text-primary mx-auto text-sm font-semibold leading-4 lg:leading-5">
+              <div className="lg:w-1/2 p-4 lg:p-6 text-center text-primary mx-auto text-sm font-semibold leading-4 lg:leading-5">
                 Test imtahanı zamanı Sizə təqdim edilən test tapşırıqları ilə
                 bağlı hər hansı sualınız yaranarsa imtahan bitdikdən sonra
                 Tədrisin Keyfiyyətinə Nəzarət şöbəsi ilə əlaqə saxlaya
@@ -51,12 +60,17 @@ const PreExamPage2 = () => {
             <Button onClick={() => navigate(-1)} className="text-sm">
               Geri
             </Button>
-            <Button disabled={!isAgreed} className="text-sm px-6">
+            <Button
+              onClick={handleConfirm}
+              disabled={!isAgreed}
+              className="text-sm px-6"
+            >
               Təsdiqlə
             </Button>
           </div>
         </div>
       </section>
+      <SurveyModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   )
 }

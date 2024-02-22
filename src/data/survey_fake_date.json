@@ -1,0 +1,1107 @@
+{
+    "version": null,
+    "statusCode": 200,
+    "message": "GET Request successful.",
+    "isError": false,
+    "responseException": null,
+    "result": {
+        "surveyQuestions": [
+            {
+                "id": 3,
+                "text": "Təhsiliniz?",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 11,
+                        "orderNo": 1,
+                        "text": "Ali",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 9,
+                        "orderNo": 2,
+                        "text": "Orta-ixtisas (texnikum,peşə məktəbi)",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 8,
+                        "orderNo": 3,
+                        "text": "Orta",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 10,
+                        "orderNo": 4,
+                        "text": "Hazırda ali təhsil alıram",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "İşlədiyiniz müəssisə?",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 12,
+                        "orderNo": 1,
+                        "text": "SOCAR",
+                        "isSocarAnswer": true
+                    },
+                    {
+                        "id": 15,
+                        "orderNo": 2,
+                        "text": "Digər təşkilat",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 14,
+                        "orderNo": 3,
+                        "text": "Fiziki şəxs",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Təlim mərkəzində tədrisin səviyyəsi sizi qane edirmi?",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Dərsdə verilən məlumatların səviyyəsi mənim bilik və bacarıqlarıma uyğun idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Tədris materialları texniki baxımdan düzgün və anlaşılan idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Dərsi tədris edən təlimçi(lər)dən razısınızmı?",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 24,
+                "text": "Təlimçi mövzuya qarşı maraq və istək yarada bilirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "text": "Təlimçi suallara dolğun və qənaətbəxş cavab verirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "text": "Təlimdə çətin məqamlar üzrə izahatlar verilmişdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 35,
+                "text": "Təlimdə praktiki nümunələr və işdə baş verən hallar qeyd edilmişdir",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 36,
+                "text": "Təlim fərdi və peşəkar keyfiyyətlərimin inkişaf etdirməsi üçün faydalı oldu",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 26,
+                        "orderNo": 1,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 28,
+                        "orderNo": 3,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 4,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 43,
+                "text": "Təlimçi suallara dolğun cavab verirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "text": "Yaşınız? (Müvafiq aralığı seçin)",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "orderNo": 1,
+                        "text": "16-26",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 2,
+                        "orderNo": 2,
+                        "text": "27-37",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 3,
+                        "orderNo": 3,
+                        "text": "38-48",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 4,
+                        "orderNo": 4,
+                        "text": "49-65",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 37,
+                "text": "Çalışdığınız müəssisə?",
+                "isSocarQuestion": true,
+                "answers": [
+                    {
+                        "id": 12,
+                        "orderNo": 1,
+                        "text": "SOCAR",
+                        "isSocarAnswer": true
+                    },
+                    {
+                        "id": 13,
+                        "orderNo": 2,
+                        "text": "Xarici təşkilat",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 14,
+                        "orderNo": 3,
+                        "text": "Fiziki şəxs",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 15,
+                        "orderNo": 4,
+                        "text": "Digər təşkilat",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 38,
+                "text": "Təlimin öyrənmə hədəfləri mənim ehtiyaclarıma uyğun idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "text": "Təlim materialının həcmi təlimin müddətinə uyğun idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 46,
+                "text": "Təlim zamanı bütün suallarıma dolğun cavab tapdım",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 49,
+                "text": "Təlimdə əldə etdiyim səriştəlikləri iş yerində tam tətbiq edə biləcəyəm",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 53,
+                "text": "Təlim materiallarının (slaydlar) dizayn və strukturu yorucu deyildi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 41,
+                "text": "Təlim materialı ardıcıl və məntiqli izah edilirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 42,
+                "text": "Təlimçinin hazırlığı lazımi səviyyədə idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 48,
+                "text": "Təlimçi təlimi interaktiv formada keçirirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 50,
+                "text": "Təlimçi vaxtı düzgün idarə edirdi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 47,
+                "text": "Təlimçi auditoriyanı məharətlə idarə edə bilirdi (ələ ala bilirdi)",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 51,
+                "text": "Təlimçi iştirakçılara hörmətlə yanaşırdı",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 40,
+                "text": "Lazımi texniki şərait yaradılmışdı (işıqlandırma, havalandırma, onlayn təlimdirsə şəbəkə və s.)",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 45,
+                "text": "Praktiki məşğələ(lər) zamanı mənə aydın izah verildi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 52,
+                "text": "Praktiki məşğələ zamanı etdiyim səhvlərə dolğun izah verildi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            },
+            {
+                "id": 44,
+                "text": "Praktiki məsğələ(lər) təlimin məzmununa uyğun idi",
+                "isSocarQuestion": false,
+                "answers": [
+                    {
+                        "id": 28,
+                        "orderNo": 1,
+                        "text": "Razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 23,
+                        "orderNo": 2,
+                        "text": "Qismən razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 21,
+                        "orderNo": 3,
+                        "text": "Fikrim yoxdur",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 30,
+                        "orderNo": 4,
+                        "text": "Razıyam",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 29,
+                        "orderNo": 4,
+                        "text": "Qəti razı deyiləm",
+                        "isSocarAnswer": false
+                    },
+                    {
+                        "id": 26,
+                        "orderNo": 5,
+                        "text": "Tam razıyam",
+                        "isSocarAnswer": false
+                    }
+                ]
+            }
+        ],
+        "surveyCompanies": [
+            {
+                "id": 1,
+                "name": "Azəriqaz İB"
+            },
+            {
+                "id": 2,
+                "name": "Azərikimya İB"
+            },
+            {
+                "id": 3,
+                "name": "Azneft İB"
+            },
+            {
+                "id": 4,
+                "name": "Bakı Ali Neft Məktəbi"
+            },
+            {
+                "id": 5,
+                "name": "Bakı Olimpiya Stadionu"
+            }
+        ],
+        "surveyTypeId": 6
+    }
+}
