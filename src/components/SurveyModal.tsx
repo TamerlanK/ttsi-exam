@@ -1,8 +1,10 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useOnClickOutside } from "usehooks-ts"
 import surveyData from "../data/survey_fake_date.json"
 import SurveyQuestion from "./SurveyQuestion"
 import { X } from "lucide-react"
+import toast from "react-hot-toast"
+import Toast from "./Toast"
 
 interface SurveyModalProps {
   isOpen: boolean
@@ -15,6 +17,8 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
     surveyQuestions.map(() => false)
   )
 
+  console.log(answeredQuestions.filter((answered) => answered).length)
+
   const modalRef = useRef<HTMLDivElement>(null)
   useOnClickOutside(modalRef, onClose)
 
@@ -25,6 +29,19 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
   }
 
   const allQuestionsAnswered = answeredQuestions.every((answered) => answered)
+
+  const notify = (message: string) =>
+    toast.custom(<Toast message={message} />, {
+      duration: 3000,
+    })
+
+  const handleConfirm = () => {
+    if (!allQuestionsAnswered) {
+      notify("Bütün sualları cavablandırın.")
+    } else {
+      onClose()
+    }
+  }
 
   return (
     <>
@@ -58,7 +75,10 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
 
               {/* FOOTER */}
               <div className="p-4 pt-0 w-full">
-                <button className="py-1.5 px-4 bg-emerald-700 text-sm rounded-[4px] text-white w-fit float-right">
+                <button
+                  className="py-1.5 px-4 bg-emerald-700 text-sm rounded-[4px] text-white w-fit float-right"
+                  onClick={handleConfirm}
+                >
                   Təsdiq et
                 </button>
               </div>

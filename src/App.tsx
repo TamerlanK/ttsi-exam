@@ -9,6 +9,7 @@ import RootLayout from "./layouts/RootLayout"
 import LoginPage from "./pages/LoginPage"
 import PreExamPage from "./pages/PreExamPage"
 import PreExamPage2 from "./pages/PreExamPage2"
+import { Toaster } from "react-hot-toast"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,10 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
+      <Toaster
+        position="top-right"
+        toastOptions={{ className: "bg-red-600" }}
+      />
     </>
   )
 }
