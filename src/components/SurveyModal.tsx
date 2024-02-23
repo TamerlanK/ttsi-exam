@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react"
-import { useOnClickOutside } from "usehooks-ts"
+import React, { useCallback, useEffect, useState } from "react"
 import surveyData from "../data/survey_fake_date.json"
 import SurveyQuestion from "./SurveyQuestion"
 import { X } from "lucide-react"
@@ -17,11 +16,6 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
   const [answeredQuestions, setAnsweredQuestions] = useState(
     Array(surveyQuestions.length).fill(false)
   )
-
-  console.log(answeredQuestions.filter((answered) => answered).length)
-
-  const modalRef = useRef<HTMLDivElement>(null)
-  useOnClickOutside(modalRef, onClose)
 
   const handleAnswerQuestion = useCallback((questionIndex: number) => {
     setAnsweredQuestions((prevAnswers) =>
@@ -44,12 +38,23 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
       duration: 3000,
     })
 
-  const handleConfirm = () => {
-    if (!allQuestionsAnswered) {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    if (allQuestionsAnswered) {
       notify("Bütün sualları cavablandırın.")
-    } else {
-      onClose()
+      return
     }
+
+    const formData = new FormData(event.currentTarget)
+    const object: any = {}
+
+    formData.forEach((value, key) => {
+      const match = key.match(/\[(\d+)\]/)
+      object[match ? parseInt(match[1]) : key] = value
+    })
+
+    console.log(object)
   }
 
   useEffect(() => {
@@ -65,7 +70,6 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
           <div
             onClick={(e) => e.stopPropagation()}
             className="bg-white max-w-6xl mx-auto w-full rounded-md h-[calc(100vh-80px)] relative"
-            ref={modalRef}
           >
             <div className="w-full space-y-4 h-full flex flex-col">
               {/* HEADER */}
@@ -78,18 +82,25 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
 
               {/* QUESTIONS */}
               <div className="custom-scrollbar | overflow-y-scroll space-y-2 ml-4 pr-4 md:px-0">
-                {surveyQuestions.map((question, idx) => (
-                  <SurveyQuestion
-                    key={question.id}
-                    question={question}
-                    order={idx + 1}
-                    onAnswer={() => handleAnswerQuestion(idx)}
+                <form
+                  action="#"
+                  method="post"
+                  id="survey_form"
+                  onSubmit={handleSubmit}
+                >
+                  {surveyQuestions.map((question, idx) => (
+                    <SurveyQuestion
+                      key={question.id}
+                      question={question}
+                      order={idx + 1}
+                      onAnswer={() => handleAnswerQuestion(idx)}
+                    />
+                  ))}
+                  <SurveyQuestionTextArea
+                    order={surveyQuestions.length + 1}
+                    questionText="Təklif və iradınız varsa qeyd edə bilərsiniz."
                   />
-                ))}
-                <SurveyQuestionTextArea
-                  order={surveyQuestions.length + 1}
-                  questionText="Təklif və iradınız varsa qeyd edə bilərsiniz."
-                />
+                </form>
               </div>
 
               {/* FOOTER */}
@@ -105,7 +116,8 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   className="py-1.5 px-4 bg-emerald-700 text-sm rounded-[4px] text-white w-fit float-right"
-                  onClick={handleConfirm}
+                  type="submit"
+                  form="survey_form"
                 >
                   Təsdiq et
                 </button>

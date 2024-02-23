@@ -1,8 +1,10 @@
-import React, { useState, useCallback } from "react"
+import { useCallback, useState } from "react"
+import AnswerOption from "./AnswerOption"
 
 type AnswerType = {
   id: number
   text: string
+  orderNo: number
 }
 
 interface SurveyQuestionProps {
@@ -42,35 +44,10 @@ const SurveyQuestion = ({ question, order, onAnswer }: SurveyQuestionProps) => {
             answer={answer}
             selectedAnswerId={selectedAnswerId}
             handleAnswerSelection={handleAnswerSelection}
+            question={question}
           />
         ))}
       </div>
-    </div>
-  )
-}
-
-interface AnswerOptionProps {
-  answer: AnswerType
-  selectedAnswerId: number | null
-  handleAnswerSelection: (answerId: number) => void
-}
-
-const AnswerOption = ({
-  answer,
-  selectedAnswerId,
-  handleAnswerSelection,
-}: AnswerOptionProps) => {
-  return (
-    <div className="text-neutral-600 flex items-center gap-x-1" key={answer.id}>
-      <label className="flex items-center gap-x-1">
-        <input
-          type="radio"
-          className="size-3"
-          checked={selectedAnswerId === answer.id}
-          onChange={() => handleAnswerSelection(answer.id)}
-        />
-        <p>{answer.text}</p>
-      </label>
     </div>
   )
 }

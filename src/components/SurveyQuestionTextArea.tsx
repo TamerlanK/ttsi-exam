@@ -22,6 +22,7 @@ const SurveyQuestionTextArea = ({
         onChange={(e) => setAnswer(e.target.value)}
         rows={4}
         className="border border-gray-300 p-2 mt-2 rounded-md w-full focus:outline-none focus:border-gray-500"
+        name="question_note"
       />
     </div>
   )
