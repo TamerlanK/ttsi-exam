@@ -1,18 +1,10 @@
 import { useCallback, useState } from "react"
 import AnswerOption from "./AnswerOption"
 
-type AnswerType = {
-  id: number
-  text: string
-  orderNo: number
-}
+import { QuestionType } from "../lib/types"
 
 interface SurveyQuestionProps {
-  question: {
-    id: number
-    text: string
-    answers: AnswerType[]
-  }
+  question: QuestionType
   order: number
   onAnswer: () => void
 }

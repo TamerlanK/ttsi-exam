@@ -1,14 +1,20 @@
+import { X } from "lucide-react"
 import React, { useCallback, useEffect, useState } from "react"
 import surveyData from "../data/survey_fake_date.json"
 import SurveyQuestion from "./SurveyQuestion"
-import { X } from "lucide-react"
+import SurveyQuestionTextArea from "./SurveyQuestionTextArea"
 import toast from "react-hot-toast"
 import Toast from "./Toast"
-import SurveyQuestionTextArea from "./SurveyQuestionTextArea"
+import ConfirmationModal from "./ConfirmationModal"
 
 interface SurveyModalProps {
   isOpen: boolean
   onClose: () => void
+}
+
+type FormDataType = {
+  [key: number]: string
+  question_note: string
 }
 
 const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
@@ -16,6 +22,17 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
   const [answeredQuestions, setAnsweredQuestions] = useState(
     Array(surveyQuestions.length).fill(false)
   )
+
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false)
+
+  const handleCancel = () => {
+    setShowConfirmationModal(false)
+  }
+
+  const handleConfirmClose = () => {
+    setShowConfirmationModal(false)
+    onClose()
+  }
 
   const handleAnswerQuestion = useCallback((questionIndex: number) => {
     setAnsweredQuestions((prevAnswers) =>
@@ -33,10 +50,11 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
     ? "Bütün suallar cavablandırılıb."
     : `${answeredQuestionsCount}/${surveyQuestions.length} sual cavablandırılıb.`
 
-  const notify = (message: string) =>
+  const notify = (message: string) => {
     toast.custom(<Toast message={message} />, {
       duration: 3000,
     })
+  }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -47,11 +65,19 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
     }
 
     const formData = new FormData(event.currentTarget)
-    const object: any = {}
+
+    const object: FormDataType = { question_note: "" }
 
     formData.forEach((value, key) => {
       const match = key.match(/\[(\d+)\]/)
-      object[match ? parseInt(match[1]) : key] = value
+      if (match) {
+        const questionIndex = parseInt(match[1])
+        if (key.includes("question_note")) {
+          object.question_note = value as string
+        } else {
+          object[questionIndex] = value as string
+        }
+      }
     })
 
     console.log(object)
@@ -75,7 +101,10 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
               {/* HEADER */}
               <div className="w-full flex items-center justify-between p-4 pb-0">
                 <h2 className="text-2xl font-semibold">Anonim rəy sorğusu</h2>
-                <button onClick={onClose} className="cursor-pointer">
+                <button
+                  onClick={() => setShowConfirmationModal(true)}
+                  className="cursor-pointer"
+                >
                   <X className="size-4 text-neutral-600" />
                 </button>
               </div>
@@ -125,6 +154,12 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
             </div>
           </div>
         </div>
+      )}
+      {showConfirmationModal && (
+        <ConfirmationModal
+          handleCancel={handleCancel}
+          handleConfirmClose={handleConfirmClose}
+        />
       )}
     </>
   )

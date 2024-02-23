@@ -1,14 +1,4 @@
-type AnswerType = {
-  id: number
-  text: string
-  orderNo: number
-}
-
-type QuestionType = {
-  id: number
-  text: string
-  answers: AnswerType[]
-}
+import { AnswerType, QuestionType } from "../lib/types"
 
 interface AnswerOptionProps {
   answer: AnswerType
