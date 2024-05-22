@@ -11,7 +11,7 @@ const PreExamPage = () => {
   const handleNextClick = () => navigate("/pre-exam")
 
   return (
-    <div className="relative h-[calc(100vh-80px)] max-w-7xl mx-auto space-y-3 pt-2 px-4 lg:px-0">
+    <div className="relative h-[calc(100vh-80px)] max-w-7xl mx-auto space-y-3 pt-2 px-4">
       <div className="h-full w-full flex flex-col justify-between">
         <div className="space-y-2">
           <InfoWrapper title="Vətəndaş haqqında məlumat">

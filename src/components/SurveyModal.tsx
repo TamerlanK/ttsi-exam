@@ -6,6 +6,7 @@ import SurveyQuestionTextArea from "./SurveyQuestionTextArea"
 import toast from "react-hot-toast"
 import Toast from "./Toast"
 import ConfirmationModal from "./ConfirmationModal"
+import axios from "axios"
 
 interface SurveyModalProps {
   isOpen: boolean
@@ -56,7 +57,7 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
     })
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (allQuestionsAnswered) {
@@ -80,7 +81,15 @@ const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => {
       }
     })
 
-    console.log(object)
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/submit-form",
+        object
+      )
+      console.log("Form submitted successfully!", response.data)
+    } catch (error) {
+      console.error("Error submitting form:", error)
+    }
   }
 
   useEffect(() => {

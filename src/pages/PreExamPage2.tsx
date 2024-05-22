@@ -25,7 +25,7 @@ const PreExamPage2 = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <section className="px-4 lg:px-0 pt-2 space-y-3 h-[calc(100vh-80px)]">
+      <section className="px-4 pt-2 space-y-3 h-[calc(100vh-80px)]">
         <div className="flex flex-col h-full justify-between w-full gap-2">
           <div className="space-y-2 max-w-5xl mx-auto">
             <InfoWrapper title="Diqqət!!!">

@@ -18,10 +18,10 @@ const LoginForm = () => {
     mode: "onChange",
   })
 
-  const onSubmit: SubmitHandler<LoginFormSchemaType> = (data) => {
+  const onSubmit: SubmitHandler<LoginFormSchemaType> = () => {
     navigate("/pre-exam-start")
   }
-  
+
   return (
     <div className="w-full bg-white p-1.5 items-center">
       <div className="relative flex items-center justify-center h-40">
